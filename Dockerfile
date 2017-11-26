@@ -8,3 +8,4 @@ RUN yum -y \
     install ansible atomic-openshift-clients nss_wrapper python2-jmespath && \
     yum clean all
 RUN git clone https://github.com/gnuthought/ansible-role-openshift-provision.git /etc/ansible/roles/openshift-provision
+COPY configure-slave /usr/local/bin/configure-slave
